@@ -1,0 +1,11 @@
+python - <<'PY' > deploy-churn/requirements.txt
+from importlib.metadata import version
+
+packages = [
+    "streamlit", "tensorflow", "keras", "pandas",
+    "numpy", "scipy", "scikit-learn", "joblib",
+]
+
+for package in packages:
+    print(f"{package}=={version(package)}")
+PY
